@@ -374,4 +374,13 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+const totalMembers = checkSameName(bills);
+
+function checkSameName(items) {
+  const memberName = items.filter((item) => item.member);
+  const sameName = memberName.map((item) => item.member.name);
+  const unique = [...new Set(sameName)];
+  return unique.length;
+}
+
+console.log(`Unique Members Count:${totalMembers}`);

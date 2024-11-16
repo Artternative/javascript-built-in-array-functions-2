@@ -375,4 +375,10 @@ const bills = [
 
 // Start coding here
 
-const newBills;
+
+function onlyMember(item){
+const newBills = item.filter(value => value.member);
+ return newBills 
+}
+
+console.log(onlyMember(bills));
